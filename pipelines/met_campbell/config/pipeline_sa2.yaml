@@ -13,6 +13,8 @@ dataset:
     /attrs/location_id: sa2
     /attrs/location_meaning: "Site A2"
     /attrs/dataset_name: met_z01
+    /data_vars/longitude/data: -97.409079
+    /data_vars/latitude/data: 36.318198
 
 quality:
   path: shared/quality.yaml
