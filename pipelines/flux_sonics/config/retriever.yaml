@@ -1,0 +1,27 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.flux_sonics.readers.FluxSonicsReader
+    parameters:
+      read_csv_kwargs:
+        header: 1
+        index_col: False
+        skiprows: [2, 3]
+coords:
+  time:
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%Y-%m-%d %H:%M:%S"
+        timezone: UTC
+    name: TIMESTAMP
+  height:
+    name: height
+  dir:
+    name: dir
+
+data_vars:
+  wind_velocity:
+    name: wind_velocity
+
+  air_temperature:
+    name: air_temperature

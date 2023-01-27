@@ -1,0 +1,130 @@
+attrs:
+  title: Lidar Halo XRP
+  description: AWAKEN XRP Halo Lidar data
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  dataset_name: lidar
+  data_level: a1
+  qualifier: halo_xrp
+  # temporal:
+  conventions: MHKiT-Cloud Data Standards v. 1.0
+
+coords:
+  range_gate:
+    attrs:
+      long_name: Range Gate
+      units: '"1"'
+    dims:
+      - range_gate
+    dtype: int
+  time:
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[ms]
+data_vars:
+  azimuth:
+    attrs:
+      description: Line of sight azimuth angle
+      long_name: Azimuth
+      units: deg
+    dims:
+      - time
+    dtype: float
+  distance:
+    attrs:
+      description: Distance LOS measurement taken from lidar
+      long_name: Distance
+      units: m
+    dims:
+      - range_gate
+    dtype: int
+  distance_overlapped:
+    attrs:
+      description: Distance LOS measurement taken from lidar
+      long_name: Distance Overlapped
+      units: m
+    dims:
+      - range_gate
+    dtype: int
+  elevation:
+    attrs:
+      description: Line of sight elevation angle
+      long_name: Elevation
+      units: m
+    dims:
+      - time
+    dtype: float
+  intensity:
+    attrs:
+      description: ""
+      long_name: Intensity
+      units: '"1"'
+    dims:
+      - time
+      - range_gate
+    dtype: float
+  pitch:
+    attrs:
+      description: Line of sight pitch angle
+      long_name: Pitch
+      units: deg
+    dims:
+      - time
+    dtype: float
+  roll:
+    attrs:
+      description: line of sight roll angle
+      long_name: Roll
+      units: deg
+    dims:
+      - time
+    dtype: float
+  SNR:
+    attrs:
+      description: Signal to noise ratio
+      long_name: SNR
+      units: dB
+    dims:
+      - time
+      - range_gate
+    dtype: float
+  wind_speed:
+    attrs:
+      description: ""
+      long_name: Wind Speed
+      units: m/s
+    dims:
+      - time
+      - range_gate
+    dtype: float
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: Latitude
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: Longitude
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: Altitude
+      comment: "Recorded altitude at the instrument location"
+      units: m

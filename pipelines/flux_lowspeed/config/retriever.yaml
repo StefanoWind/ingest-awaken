@@ -1,0 +1,25 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: tsdat.io.readers.CSVReader
+    parameters:
+      read_csv_kwargs:
+        header: 1
+        index_col: False
+        skiprows: [2, 3]
+coords:
+  time:
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%Y-%m-%d %H:%M:%S"
+        timezone: UTC
+    name: TIMESTAMP
+data_vars:
+  air_temperature:
+    name: Temperature
+  relative_humidity:
+    name: RelativeHumidity
+  surface_air_pressure:
+    name: Pressure
+  wind_speed:
+    name: WS_15m

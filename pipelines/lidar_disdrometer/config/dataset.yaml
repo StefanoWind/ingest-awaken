@@ -1,0 +1,253 @@
+attrs:
+  title: Laser Disdrometer
+  dataset_name: ldis_z01
+  description: AWAKEN Laser Disdrometer data
+  institution: Atmosphere to Electrons
+  location_meaning: ""
+  location_id: sh
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 10s
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    attrs:
+      description: ""
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[s]
+
+data_vars:
+  rain_intensity:
+    dtype: float
+    dims: [time]
+    attrs:
+      description: ""
+      long_name: Rain Intensity
+      units: mm/hr
+      valid_min: 0
+      valid_max: 9999.999
+  rain_accumulated:
+    dtype: float
+    dims: [time]
+    attrs:
+      description: Rain amount accumulated
+      long_name: Rain Accumulated
+      units: mm
+      valid_min: 0
+      valid_max: 300
+  weather_code_synop_4680:
+    dtype: int
+    dims: [time]
+    attrs:
+      description: Weather code according to SYNOP, Table 4680
+      long_name: Weather Code
+      units: "1"
+      valid_min: 0
+      valid_max: 99
+  weather_code_synop_4677:
+    dtype: int
+    dims: [time]
+    attrs:
+      description: Weather code according to SYNOP, Table 4677
+      long_name: Weather Code
+      units: "1"
+      valid_min: 0
+      valid_max: 99
+  weather_code_synop_4678:
+    dtype: str
+    dims: [time]
+    attrs:
+      description: Weather code according to SYNOP, Table 4678
+      long_name: Weather Code
+      units: "1"
+  weather_code_nws:
+    dtype: str
+    dims: [time]
+    attrs:
+      description: Weather code according to NWS
+      long_name: Weather Code
+      units: "1"
+  radar_reflectivity:
+    dtype: float
+    dims: [time]
+    attrs:
+      description: ""
+      long_name: Radar Reflectivity
+      units: dBZ
+      valid_min: -9.999
+      valid_max: 99.999
+  visibility:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: MOR visibility in precipitation
+      long_name: Visibility
+      units: m
+      valid_min: 0
+      valid_max: 20000
+  sample_interval:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: ""
+      long_name: Sample Interval
+      units: s
+      valid_min: 0
+      valid_max: 3600
+  signal_amplitude:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: Signal amplitude of laserband
+      long_name: Signal Amplitude
+      units: "1"
+      valid_min: 0
+      valid_max: 99999
+  n_particles:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: number of particles detected and validated
+      long_name: Number of Particles
+      units: "1"
+      valid_min: 0
+      valid_max: 99999
+  housing_temperature:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: Temperature in sensor housing
+      long_name: Housing Temperature
+      units: degC
+      valid_min: -99
+      valid_max: 100
+  heating_current:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: Heating current sent to sensor head
+      long_name: Heating Current
+      units: A
+      valid_min: 0
+      valid_max: 4.
+  sensor_voltage:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: Power supply voltage
+      long_name: Voltage
+      units: V
+      valid_min: 0
+      valid_max: 30.
+  sensor_status:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: ""
+      long_name: Sensor Status
+      units: "1"
+      valid_min: 0
+      valid_max: 3
+  right_sensor_temperature:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: Temperature in the right sensor head
+      long_name: Sensor Temperature
+      units: degC
+      valid_min: -99
+      valid_max: 100
+  left_sensor_temperature:
+    dims: [time]
+    dtype: int
+    attrs:
+      description: Temperature in the left sensor head
+      long_name: Sensor Temperature
+      units: degC
+      valid_min: -99
+      valid_max: 100
+  kinetic_energy:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: Kinetic energy of precipitation
+      long_name: Kinetic Energy
+      units: dBz
+      valid_min: -9.99
+      valid_max: 99.99
+  snow_intensity:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: Snow depth intensity (volume equivalent)
+      long_name: Snow Intensity
+      units: J/(m^2 h)
+      valid_min: 0
+      valid_max: 999.999
+
+  latitude:
+    data: 71.323
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "North latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degree_N"
+  longitude:
+    data: -156.609
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "East longitude"
+      standard_name: "longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degree_E"
+  altitude:
+    data: 4000.0
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m
+
+  serial_number:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"
+  firmware_iop_version:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"
+  firmware_dsp_version:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"
+  deployment_time:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"
+  # sensor_date:
+  #   dims: []
+  #   dtype: str
+  #   attrs:
+  #     units: "1"
+  station_name:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"
+  station_number:
+    dims: []
+    dtype: str
+    attrs:
+      units: "1"

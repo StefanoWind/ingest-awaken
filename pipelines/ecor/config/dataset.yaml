@@ -1,0 +1,500 @@
+attrs:
+  title: Eddy Flux Tower Ingest Pipeline
+  dataset_name: ecor_e14
+  description:
+    ARM eddy correlation flux measurement system
+    (https://www.arm.gov/publications/tech_reports/handbooks/ecor_handbook.pdf)
+  institution: Atmosphere to Electrons
+  location_id: sgp
+  data_level: a1
+  # qualifier: ecor
+  # temporal: 30m
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[s]
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+  var0:
+    dims: [var0]
+    dtype: str
+    attrs:
+      description:
+        "u_wind, v_wind, w_wind, temperature, water vapor density, carbon dioxide
+        density, wind magnitude"
+      units: "1"
+  var1:
+    dims: [var1]
+    dtype: str
+    attrs:
+      description:
+        "u_wind, v_wind, w_wind, temperature, water vapor density, carbon dioxide
+        density, wind magnitude"
+      units: "1"
+
+data_vars:
+  u_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity u direction"
+      units: m/s
+  v_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity v direction"
+      units: m/s
+  w_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity w direction"
+      units: m/s
+  T_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air temperature"
+      units: K
+      valid_min: 207
+      valid_max: 407
+  q_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average water vapor density"
+      units: kg/m^3
+      valid_min: 0
+      valid_max: 2000
+  c_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average carbon dioxide density"
+      units: kg/m^3
+      valid_min: 8
+      valid_max: 32
+  V_mean:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average windspeed"
+      units: m/s
+
+  u_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity u direction 'spike'"
+      units: m/s
+  v_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity v direction 'spike'"
+      units: m/s
+  w_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air velocity w direction 'spike'"
+      units: m/s
+  T_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average air temperature 'spike'"
+      units: K
+  q_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average water vapor density 'spike'"
+      units: kg/m^3
+  c_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average carbon dioxide density 'spike'"
+      units: kg/m^3
+  V_mean_spk:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average windspeed 'spike'"
+      units: m/s
+
+  u_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity u direction variance"
+      units: m/s
+  v_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity v direction variance"
+      units: m/s
+  w_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity w direction variance"
+      units: m/s
+  T_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air temperature variance"
+      units: K
+  q_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "water vapor density variance"
+      units: kg/m^3
+  c_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "carbon dioxide density variance"
+      units: kg/m^3
+  V_var:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "windspeed variance"
+      units: m/s
+
+  u_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity u direction skewness"
+      units: m/s
+  v_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity v direction skewness"
+      units: m/s
+  w_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity w direction skewness"
+      units: m/s
+  T_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air temperature skewness"
+      units: K
+  q_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "water vapor density skewness"
+      units: kg/m^3
+  c_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "carbon dioxide density skewness"
+      units: kg/m^3
+  V_skew:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "windspeed skewness"
+      units: m/s
+
+  u_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity u direction kurtosis"
+      units: m/s
+  v_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity v direction kurtosis"
+      units: m/s
+  w_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air velocity w direction kurtosis"
+      units: m/s
+  T_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air temperature kurtosis"
+      units: K
+  q_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "water vapor density kurtosis"
+      units: kg/m^3
+  c_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "carbon dioxide density kurtosis"
+      units: kg/m^3
+  V_kurt:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "windspeed kurtosis"
+      units: m/s
+
+  u_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' air velocity u direction"
+      units: m/s
+  v_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' air velocity v direction"
+      units: m/s
+  w_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' air velocity w direction"
+      units: m/s
+  T_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' air temperature"
+      units: deg C
+  q_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' water vapor density"
+      units: kg/m^3
+  c_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' carbon dioxide density"
+      units: kg/m^3
+  V_mean_rot:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average 'rotated' windspeed"
+      units: m/s
+
+  covariance:
+    dims: [var0, var1]
+    dtype: float
+    attrs:
+      description: "variable covariance matrix"
+      units: "unit^2"
+
+  covariance_rot:
+    dims: [var0, var1]
+    dtype: float
+    attrs:
+      description: "'rotated' variable covariance matrix"
+      units: "unit^2"
+
+  sensible_heat_flux:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "sensible heat flux (H)"
+      units: W/m^2
+  latent_heat_flux:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "latent heat flux (Lv_E)"
+      units: W/m^2
+  momentum_flux:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "momentum flux (dynamic) (M)"
+      units: kg/(m s^2)
+  friction_velocity:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "shear or friction velocity (u_*)"
+      units: m/s
+  c_flux:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "carbon dioxide flux (F_{CO2})"
+      units: umol/(m^2 s)
+
+  wind_speed:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average wind speed (horizontal)"
+      units: m/s
+  wind_direction:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average wind direction (horizontal)"
+      units: deg from N
+  wind_angle_vertical:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "wind mean vertical angle (from horizontal plane)"
+      units: deg
+  wind_angle_horizontal:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "wind mean horizontal angle"
+      units: deg
+  wind_direction_std:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average wind direction (horizontal) standard deviation"
+      units: deg
+  wind_angle_vertical_std:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "standard devation of wind vertical angle (from horizontal plane)"
+      units: deg
+
+  specific_heat:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "specific heat capacity of air"
+      units: J/(kg K)
+  specific_heat_50RH:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "specific heat capacity of air at 50% relative humidity"
+      units: J/(kg K)
+  heat_of_vaporization:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "heat of vaporization of air"
+      units: J/(kg K)
+  heat_of_vaporization_50RH:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "heat of vaporization of air at 50% relative humidity"
+      units: J/mol
+  air_density:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "moist air density"
+      units: kg/m^3
+  air_density_50RH:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "moist air density at 50% relative humidity"
+      units: kg/m^3
+  mixing_ratio:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "mass ratio of water in air (specific humidity)"
+      units: kg/kg
+  mixing_ratio_50RH:
+    dims: [time]
+    dtype: float
+    attrs:
+      description:
+        "mass ratio of water in air (specific humidity) at 50% relative humidity"
+      units: kg/kg
+
+  q_irga_signal_strength:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average signal strength of water vapor optical signal"
+      units: "1"
+  c_irga_signal_strength:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "average signal strength of carbon dioxide optical signal"
+      units: "1"
+  irga_pressure:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air pressure within irga electronics enclosure"
+      units: kPa
+  irga_temp:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "air temperature within irga electronics enclosure"
+      units: degC
+  irga_cooler_voltage:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "mean irga cooling system voltage"
+      units: V
+  irga_status:
+    dims: [time]
+    dtype: float
+    attrs:
+      description: "irga status code"
+      units: "1"
+
+  latitude:
+    data: 71.323
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "North latitude"
+      standard_name: "latitude"
+      description: "Recorded lattitude at the instrument location"
+      units: degN
+
+  longitude:
+    data: -156.609
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "East longitude"
+      standard_name: "longitude"
+      description: "Recorded longitude at the instrument location"
+      units: degE
+
+  altitude:
+    data: 4000.0
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      standard_name: "altitude"
+      description: "Recorded altitude at the instrument location"
+      units: m

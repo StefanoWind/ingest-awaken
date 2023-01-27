@@ -1,8 +1,4 @@
-tsdat == 0.2.12
-netcdf4
-xarray
-numpy
-matplotlib
+tsdat >=0.5.1, <0.6.0
+cmocean  
+notebook
 act-atmos
-parse
-typer

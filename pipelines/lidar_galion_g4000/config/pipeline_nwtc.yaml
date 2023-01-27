@@ -1,0 +1,15 @@
+classname: pipelines.lidar_galion_g4000.pipeline.GalionG4000Lidar
+
+triggers:
+  - .*Galion.*\.scn
+
+retriever:
+  path: pipelines/lidar_galion_g4000/config/retriever.yaml
+
+dataset:
+  path: pipelines/lidar_galion_g4000/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

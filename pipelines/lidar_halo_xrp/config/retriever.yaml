@@ -1,0 +1,23 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.lidar_halo_xrp.readers.HplReader
+
+coords:
+  range_gate:
+    name: range_gate
+  time:
+    name: time
+data_vars:
+  azimuth:
+    name: Azimuth (degrees)
+  elevation:
+    name: Elevation (degrees)
+  intensity:
+    name: Intensity
+  pitch:
+    name: Pitch (degrees)
+  roll:
+    name: Roll (degrees)
+  wind_speed:
+    name: Doppler

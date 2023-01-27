@@ -1,0 +1,28 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.met_campbell.readers.METReader
+
+coords:
+  time:
+    name: datetime
+data_vars:
+  average_wind_speed:
+    name: S
+  pressure:
+    data_converters:
+      - classname: tsdat.io.converters.UnitsConverter
+        input_units: mbar
+    name: P
+  relative_humidity:
+    name: RH
+  shortwave_radiation:
+    name: E
+  temperature:
+    name: T
+  wind_direction:
+    name: U_dir
+  wind_direction_std:
+    name: U_dir_std
+  wind_speed:
+    name: U

@@ -1,0 +1,90 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.wind_cube_nacelle_sta.readers.WindCubeReaderSTA
+
+coords:
+  time:
+    name: time
+  distance:
+    name: distance
+
+data_vars:
+  CNR0:
+    name: CNR0
+  CNR1:
+    name: CNR1
+  CNR2:
+    name: CNR2
+  CNR3:
+    name: CNR3
+  direction_high:
+    name: DIRECTION_high
+  direction_hub:
+    name: DIRECTION_hub
+  direction_low:
+    name: DIRECTION_low
+  height_high:
+    name: HEIGHT_high
+  height_low:
+    name: HEIGHT_low
+  HWS_high:
+    name: HWS_high
+  HWS_high_availability:
+    name: HWS_high_Availability
+  HWS_hub:
+    name: HWS_hub
+  HWS_hub_availability:
+    name: HWS_hub_availability
+  HWS_low:
+    name: HWS_low
+  HWS_low_availability:
+    name: HWS_low_Availability
+  RWS0:
+    name: RWS0
+  RWS0_availability:
+    name: RWS0_availability
+  RWS1:
+    name: RWS1
+  RWS1_availability:
+    name: RWS1_availability
+  RWS2:
+    name: RWS2
+  RWS2_availability:
+    name: RWS2_availability
+  RWS3:
+    name: RWS3
+  RWS3_availability:
+    name: RWS3_availability
+  roll:
+    name: roll
+  shear:
+    name: Shear
+  TI0:
+    name: TI0
+  TI1:
+    name: TI1
+  TI2:
+    name: TI2
+  TI3:
+    name: TI3
+  TI_gain:
+    name: TI_gain
+  TI_high:
+    name: TI_high
+  TI_hub:
+    name: TI_hub
+  TI_low:
+    name: TI_low
+  tilt:
+    name: tilt
+  U_high:
+    name: U_high
+  U_low:
+    name: U_low
+  V_high:
+    name: V_high
+  V_low:
+    name: V_low
+  veer:
+    name: Veer

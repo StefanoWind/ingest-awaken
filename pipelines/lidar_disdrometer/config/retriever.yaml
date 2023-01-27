@@ -1,0 +1,71 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.lidar_disdrometer.readers.DisdrometerReader
+    parameters:
+      read_csv_kwargs:
+        delimiter: ":"
+        index_col: 0
+        header: null
+        dtype: str
+
+coords:
+  time:
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%H:%M:%S_%d.%m.%Y"
+        timezone: UTC
+    name: "19"
+data_vars:
+  rain_intensity:
+    name: "1"
+  rain_accumulated:
+    name: "2"
+  weather_code_synop_4680:
+    name: "3"
+  weather_code_synop_4677:
+    name: "4"
+  weather_code_synop_4678:
+    name: "5"
+  weather_code_nws:
+    name: "6"
+  radar_reflectivity:
+    name: "7"
+  visibility:
+    name: "8"
+  sample_interval:
+    name: "9"
+  signal_amplitude:
+    name: "10"
+  n_particles:
+    name: "11"
+  housing_temperature:
+    name: "12"
+  serial_number:
+    name: "13"
+  firmware_iop_version:
+    name: "14"
+  firmware_dsp_version:
+    name: "15"
+  heating_current:
+    name: "16"
+  sensor_voltage:
+    name: "17"
+  sensor_status:
+    name: "18"
+  deployment_time:
+    name: "20"
+  # deployment_date:
+  #   name: "21"
+  station_name:
+    name: "22"
+  station_number:
+    name: "23"
+  right_sensor_temperature:
+    name: "27"
+  left_sensor_temperature:
+    name: "28"
+  kinetic_energy:
+    name: "34"
+  snow_intensity:
+    name: "35"

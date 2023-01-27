@@ -1,0 +1,49 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.aml_lidar.readers.AmlLdReader
+    parameters:
+      read_csv_kwargs:
+        delimiter: ","
+        index_col: False
+        header: 0
+        encoding: "ISO-8859-1"
+
+coords:
+  time:
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%d.%m.%Y %H:%M:%S"
+        timezone: UTC
+    name: time
+data_vars:
+  amplitude:
+    name: Signal amplitude of Laserband
+  heating_current:
+    name: Heating current (A)
+  kinetic_energy:
+    name: Kinetic Energy
+  n_particles:
+    name: Number of detected particles
+  optics_status:
+    name: Optics status
+  precipitation_intensity:
+    name: Intensity of precipitation (mm/h)
+  radar_reflectivity:
+    name: Radar reflectivity (dBz)
+  sensor_temperature:
+    name: Temperature in sensor (°C)
+  sensor_voltage:
+    name: Sensor voltage (V)
+  snow_intensity:
+    name: Snow intensity (mm/h)
+  total_precipitation:
+    name: Precipitation since start (mm)
+  visibility:
+    name: MOR Visibility (m)
+  weather_code_metar:
+    name: Weather code METAR/SPECI
+  weather_code_nws:
+    name: Weather code NWS
+  weather_code_synop:
+    name: Weather code SYNOP WaWa

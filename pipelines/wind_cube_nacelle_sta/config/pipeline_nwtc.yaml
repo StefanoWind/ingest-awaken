@@ -1,0 +1,15 @@
+classname: pipelines.wind_cube_nacelle_sta.pipeline.WindCubeNacelleSTA
+
+triggers:
+  - .*average.*\.csv
+
+retriever:
+  path: pipelines/wind_cube_nacelle_sta/config/retriever.yaml
+
+dataset:
+  path: pipelines/wind_cube_nacelle_sta/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

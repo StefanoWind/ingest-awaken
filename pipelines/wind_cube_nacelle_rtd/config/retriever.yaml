@@ -1,0 +1,22 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.wind_cube_nacelle_rtd.readers.WindCubeReaderRTD
+
+coords:
+  time:
+    name: time
+  distance:
+    name: distance
+
+data_vars:
+  radial_wind_speed:
+    name: radial_wind_speed
+  radial_dispersion:
+    name: radial_dispersion
+  CNR:
+    name: CNR
+  roll:
+    name: roll
+  tilt:
+    name: tilt

@@ -1,0 +1,15 @@
+classname: pipelines.aml_lidar.pipeline.amlLidar
+
+triggers:
+  - .*aml.ld.z01.*\.dat
+
+retriever:
+  path: pipelines/aml_lidar/config/retriever.yaml
+
+dataset:
+  path: pipelines/aml_lidar/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

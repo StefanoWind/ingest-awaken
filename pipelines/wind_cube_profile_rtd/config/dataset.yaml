@@ -1,0 +1,203 @@
+attrs:
+  title: Wind Cube Profile RTD
+  dataset_name: wind_cube_profile_rtd
+  description: AWAKEN Wind Cube Profile real-time data
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 1s
+  conventions: MHKiT-Cloud Data Standards v. 1.0
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[ms]
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+
+  distance:
+    dims: [distance]
+    dtype: float
+    attrs:
+      long_name: distance ASL
+      units: m
+
+data_vars:
+  # internal_temperature:
+  #   dims: [time]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Int Temp
+  #     units: degC
+
+  air_temperature:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Ext Temp
+      units: C
+
+  # pressure:
+  #   dims: [time]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Pressure
+  #     units: hPa
+
+  # relative_humidity:
+  #   dims: [time]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Rel Humidity
+  #     units: "%"
+
+  wiper_count:
+    dims: [time]
+    dtype: int
+    attrs:
+      long_name: Wiper Count
+      units: count
+
+  # battery_voltage:
+  #   dims: [time]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Vbatt
+  #     units: V
+
+  wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Wind Speed
+      units: m/s
+
+  radial_wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Radial Wind Speed
+      units: m/s
+
+  radial_dispersion:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Radial Wind Speed Dispersion
+      units: m/s
+
+  # wind_speed_min:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Wind Speed Min
+  #     units: m/s
+
+  # wind_speed_max:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Wind Speed Max
+  #     units: m/s
+
+  wind_speed_z:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: z-wind
+      units: m/s
+
+  wind_speed_x:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: x-wind
+      units: m/s
+
+  wind_speed_y:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: y-wind
+      units: m/s
+
+  # z_wind_dispersion:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Z-wind Dispersion
+  #     units: m/s
+
+  wind_direction:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Wind Direction
+      units: degrees
+
+  CNR:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Carrier-to-noise ratio
+      units: dB
+
+  # crn_min:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: CRN_Min
+  #     units: dB
+
+  # dopp_spect_broad:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Dopp Spect Broad
+  #     units: m/s
+
+  # data_availability:
+  #   dims: [time, distance]
+  #   dtype: float
+  #   attrs:
+  #     long_name: Availability
+  #     units: "%"
+
+  position:
+    dims: [time]
+    dtype: int
+    attrs:
+      units: "1"
+      description:
+        Azimuthal position of scan. V is replaced with -1 for a vertical scan.
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m

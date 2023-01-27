@@ -1,0 +1,44 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.wind_cube_profile_sta.readers.WindCubeProfileSTAReader
+
+coords:
+  time:
+    name: Timestamp (end of interval)
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%Y-%m-%d %H:%M"
+        timezone: UTC
+  distance:
+    name: distance
+
+data_vars:
+  wind_speed:
+    name: wind_speed
+  horizontal_dispersion:
+    name: horizontal_dispersion
+  min_wind_speed:
+    name: min_wind_speed
+  max_wind_speed:
+    name: max_wind_speed
+  wind_direction:
+    name: wind_direction
+  vertical_wind_speed:
+    name: vertical_wind_speed
+  vertical_dispersion:
+    name: vertical_dispersion
+  CNR:
+    name: CNR
+  doppler_spectral_broadening:
+    name: doppler_spectral_broadening
+  data_availability:
+    name: data_availability
+  pressure:
+    name: Pressure (hPa)
+  relative_humidity:
+    name: Rel Humidity (%)
+  internal_temperature:
+    name: Int Temp (degC)
+  air_temperature:
+    name: Ext Temp (degC)

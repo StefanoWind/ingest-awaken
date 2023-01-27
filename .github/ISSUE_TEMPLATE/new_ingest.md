@@ -3,7 +3,7 @@ name: New Ingest Request
 about: Suggest adding an ingest to this project
 title: ''
 labels: 'ingest'
-assignees: 'dzalkind'
+assignees: ''
 
 ---
 

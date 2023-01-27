@@ -1,0 +1,15 @@
+classname: pipelines.ecor.pipeline.Ecor
+
+triggers:
+  - .*sgpecorE14.*\.flx
+
+retriever:
+  path: pipelines/ecor/config/retriever.yaml
+
+dataset:
+  path: pipelines/ecor/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

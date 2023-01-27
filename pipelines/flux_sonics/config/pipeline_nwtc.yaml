@@ -1,0 +1,15 @@
+classname: pipelines.flux_sonics.pipeline.FluxSonics
+
+triggers:
+  - .*CR1000X.*\Sonics.*\.dat
+
+retriever:
+  path: pipelines/flux_sonics/config/retriever.yaml
+
+dataset:
+  path: pipelines/flux_sonics/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

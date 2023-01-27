@@ -1,0 +1,106 @@
+attrs:
+  title: Galion G4000 Lidar
+  dataset_name: lidar_galion_g4000
+  description: AWAKEN Wind speed data from Galion G4000
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 1m
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  range_gate:
+    attrs:
+      long_name: Range Gate
+      units: '"1"'
+    dims:
+      - range_gate
+    dtype: int
+  time:
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[s]
+data_vars:
+  azimuth:
+    attrs:
+      description: "Angle of lidar scan to the horizontal"
+      long_name: Azimuth
+      units: deg
+    dims:
+      - time
+    dtype: float
+  elevation:
+    attrs:
+      description: "Angle of lidar scan to the vertical"
+      long_name: Elevation
+      units: deg
+    dims:
+      - time
+    dtype: float
+  pitch:
+    attrs:
+      description: "Sensor mounted pitch angle"
+      long_name: Pitch
+      units: deg
+    dims:
+      - time
+    dtype: float
+  roll:
+    attrs:
+      description: "Sensor mounted roll angle"
+      long_name: Roll
+      units: deg
+    dims:
+      - time
+    dtype: float
+  wind_speed:
+    attrs:
+      description: ""
+      long_name: Wind Speed
+      units: m/s
+    dims:
+      - time
+      - range_gate
+    dtype: float
+  intensity:
+    attrs:
+      description: ""
+      long_name: Intensity
+      units: '"1"'
+    dims:
+      - time
+      - range_gate
+    dtype: float
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m

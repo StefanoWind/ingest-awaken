@@ -1,0 +1,195 @@
+attrs:
+  title: ASSIST Radiance Summary
+  dataset_name: assist
+  description: AWAKEN ASSIST radiance summary data
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: rad
+  # temporal: 10s
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[s]
+data_vars:
+  abb_apex_temperature:
+    attrs:
+      description: Temperature of the ambient black body measured at apex (in overall summary file)
+      long_name: ABB Apex Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  abb_bottom_temperature:
+    attrs:
+      description:
+        Temperature of the ambient black body measured at bottom (in overall summary
+        file)
+      long_name: ABB Bottom Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  abb_top_temperature:
+    attrs:
+      description: Temperature of the ambient black body measured at top (in overall summary file)
+      long_name: ABB Top Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  cooler_block_temperature:
+    attrs:
+      description:
+        Temperature of the cooling block, related to cooling power (in overall summary
+        file)
+      long_name: Cooler Block Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  front_end_temperature:
+    attrs:
+      description: Temperature of the front end of the enclosure (in overall summary file)
+      long_name: Front End Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  hatch_status:
+    attrs:
+      description: 1=open, 0=closed, -1=undetermined (in overall summary file)
+      long_name: Hatch Status
+      units: "1"
+    dims:
+      - time
+    dtype: float
+  hbb_apex_temperature:
+    attrs:
+      description: Temperature of the hot black body measured at apex (in overall summary file)
+      long_name: HBB Apex Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  hbb_bottom_temperature:
+    attrs:
+      description: Temperature of the hot black body measured at bottom (in overall summary file)
+      long_name: HBB Bottom Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  hbb_top_temperature:
+    attrs:
+      description: Temperature of the hot black body measured at top (in overall summary file)
+      long_name: HBB Top Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  interferometer_humidity:
+    attrs:
+      description: Relative humidity at the interferometer (in overall summary file)
+      long_name: Interferometer Humidity
+      units: "%"
+    dims:
+      - time
+    dtype: float
+  interferometer_temperature:
+    attrs:
+      description: Temperature of the interferometer (in overall summary file)
+      long_name: Interferometer Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  lw_responsivity:
+    attrs:
+      description: Average responsivity of the long-wave detector (in overall summary file)
+      long_name: LW Responsivity
+      units: "1"
+    dims:
+      - time
+    dtype: float
+  mean_imaginary_rad_985_990:
+    attrs:
+      description:
+        Imaginary part of radiance in wavelengths between 985 - 990 nm (in overall
+        summary file)
+      long_name: Mean Imaginary Rad 985_990
+      units: mW/(m2 sr cm-1)
+    dims:
+      - time
+    dtype: float
+  mean_radiance:
+    attrs:
+      description: Spectral radiance (in channel A, B files)
+      long_name: Mean Radiance
+      units: mW/(m2 sr cm-1)
+    dims:
+      - time
+    dtype: float
+  mean_tb_675_680:
+    attrs:
+      description:
+        Mean brightness temperature in wavelengths between 675 - 680 nm (in overall
+        summary file)
+      long_name: Mean Tb 675_680
+      units: K
+    dims:
+      - time
+    dtype: float
+  mean_tb_985_990:
+    attrs:
+      description:
+        Mean brightness temperature in wavelengths between 985 - 990 nm (in overall
+        summary file)
+      long_name: Mean Tb 985_990
+      units: K
+    dims:
+      - time
+    dtype: float
+  sw_responsivity:
+    attrs:
+      description: Average responsivity of the short-wave detector (in overall summary file)
+      long_name: SW Responsivity
+      units: "1"
+    dims:
+      - time
+    dtype: float
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "North latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "East longitude"
+      standard_name: "longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      standard_name: "altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m

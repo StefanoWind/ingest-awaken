@@ -1,0 +1,15 @@
+classname: pipelines.flux_lowspeed.pipeline.FluxLowspeed
+
+triggers:
+  - .*CR1000X.*\.LowSpeedData.*\.dat
+
+retriever:
+  path: pipelines/flux_lowspeed/config/retriever.yaml
+
+dataset:
+  path: pipelines/flux_lowspeed/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

@@ -13,15 +13,23 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: Debug Tests",
+            "name": "Debug Tests",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
             "purpose": [
                 "debug-test"
             ],
+            "program": "${file}",
+            "justMyCode": false,
             "console": "integratedTerminal",
-            "justMyCode": false
+        },
+        {
+            "name": "Runner",
+            "type": "python",
+            "request": "launch",
+            "program": "runner.py",
+            "justMyCode": false,
+            "console": "integratedTerminal"
         }
     ]
 }

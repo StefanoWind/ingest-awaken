@@ -1,0 +1,43 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*\.cdf:
+    classname: pipelines.assist.readers.AssistReader
+
+coords:
+  time:
+    name: time
+data_vars:
+  abb_apex_temperature:
+    name: ABBapexTemp
+  abb_bottom_temperature:
+    name: ABBbottomTemp
+  abb_top_temperature:
+    name: ABBtopTemp
+  cooler_block_temperature:
+    name: detectorStirlingCoolerBlockTemp
+  front_end_temperature:
+    name: frontEndEnclosureTemp
+  hatch_status:
+    name: hatchOpen
+  hbb_apex_temperature:
+    name: HBBapexTemp
+  hbb_bottom_temperature:
+    name: HBBbottomTemp
+  hbb_top_temperature:
+    name: HBBtopTemp
+  interferometer_humidity:
+    name: interferometerHumidity
+  interferometer_temperature:
+    name: interferometerTemp
+  lw_responsivity:
+    name: LWresponsivity
+  mean_imaginary_rad_985_990:
+    name: mean_imaginary_rad_985_990
+  # mean_radiance:
+  #   name: mean_rad
+  mean_tb_675_680:
+    name: mean_Tb_675_680
+  # mean_tb_985_990:
+  #   name: mean_Tb_985-990
+  sw_responsivity:
+    name: SWresponsivity

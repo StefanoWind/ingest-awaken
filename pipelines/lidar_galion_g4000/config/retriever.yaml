@@ -1,0 +1,27 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.lidar_galion_g4000.readers.ScnReader
+
+coords:
+  range_gate:
+    name: range_gate
+  time:
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%Y/%m/%d %H:%M"
+        timezone: UTC
+    name: time
+data_vars:
+  azimuth:
+    name: azimuth
+  elevation:
+    name: elevation
+  intensity:
+    name: intensity
+  pitch:
+    name: pitch
+  roll:
+    name: roll
+  wind_speed:
+    name: wind_speed

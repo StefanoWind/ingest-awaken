@@ -1,0 +1,15 @@
+classname: pipelines.wind_cube_nacelle_rtd.pipeline.WindCubeNacelleRTD
+
+triggers:
+  - .*WIPO.*\real_time_data.*\.csv
+
+retriever:
+  path: pipelines/wind_cube_nacelle_rtd/config/retriever.yaml
+
+dataset:
+  path: pipelines/wind_cube_nacelle_rtd/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

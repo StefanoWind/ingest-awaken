@@ -1,0 +1,120 @@
+attrs:
+  title: Sonic Anemometer
+  dataset_name: flux_sonics_21544
+  description: AWAKEN Sonic anemometer data from a surface flux station
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: wind
+  # temporal: 50ms
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[ms]
+  height:
+    dims: [height]
+    dtype: int
+    attrs:
+      long_name: Height ASL
+      units: m
+  dir:
+    dims: ["dir"]
+    dtype: str
+    attrs:
+      long_name: Direction
+      units: "1"
+  earth:
+    data: ["E", "N", "U"]
+    dims: ["earth"]
+    dtype: str
+    attrs:
+      long_name: Cardinal Direction
+      units: "1"
+
+data_vars:
+  wind_velocity:
+    dims: [time, height, dir]
+    dtype: float
+    attrs:
+      long_name: Wind Velocity
+      units: m/s
+
+  wind_velocity_ENU:
+    dims: [time, height, earth]
+    dtype: float
+    attrs:
+      long_name: Wind Velocity, ENU
+      description: Wind velocity in East, North, Up (Earth coordinates)
+      standard_name: eastward_wind
+      units: m/s
+
+  wind_speed:
+    dims: [time, height]
+    dtype: float
+    attrs:
+      long_name: Wind Speed
+      description: Magnitude of wind velocity in horizontal directions.
+      units: m/s
+
+  wind_direction:
+    dims: [time, height]
+    dtype: float
+    attrs:
+      long_name: Wind Direction
+      units: m/s
+
+  air_temperature:
+    dims: [time, height]
+    dtype: float
+    attrs:
+      long_name: Temperature, sonic
+      description: The air temperature as calculated with sonic (acoustic) thermometry.
+      standard_name: air_temperature
+      units: degC
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "North latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "East longitude"
+      standard_name: "longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      standard_name: "altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m
+
+  orientation:
+    data: 270.0
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Orientation"
+      standard_name: "orientation"
+      comment: "Orientation of instrument"
+      units: degrees

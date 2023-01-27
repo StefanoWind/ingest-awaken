@@ -1,0 +1,86 @@
+attrs:
+  title: Wind Cube Nacelle RTD
+  dataset_name: wind_cube_nacelle_rtd
+  description: AWAKEN Wind Cube Nacelle V2 real-time data
+  institution: Atmosphere to Electrons
+  location_meaning: NREL Flatirons Test Site
+  location_id: nwtc
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 1s
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[ms]
+    attrs:
+      units: Seconds since 1970-01-01 00:00:00
+  distance:
+    attrs:
+      long_name: distance
+      description: Measurement plan distance
+      units: m
+    dims: [distance]
+    dtype: float
+
+data_vars:
+  radial_wind_speed:
+    attrs:
+      long_name: Radial Wind Speed
+      units: m/s
+    dims: [time, distance]
+    dtype: float
+  radial_dispersion:
+    attrs:
+      long_name: Radial Wind Speed Dispersion
+      units: m/s
+    dims: [time, distance]
+    dtype: float
+  CNR:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Carrier-to-noise ratio
+      units: dB
+  roll:
+    attrs:
+      long_name: Roll
+      description: Roll angle of the telescope (average data).
+      units: deg
+    dims: [time]
+    dtype: float
+  tilt:
+    attrs:
+      long_name: Tilt
+      units: NA
+    dims: [time]
+    dtype: float
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      long_name: "Altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m

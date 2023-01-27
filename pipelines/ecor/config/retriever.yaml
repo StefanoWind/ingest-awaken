@@ -1,0 +1,229 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.ecor.readers.EcorReader
+
+coords:
+  time:
+    name: time
+  var0:
+    name: var0
+  var1:
+    name: var1
+
+data_vars:
+  u_mean:
+    input:
+      name: u_average
+  v_mean:
+    input:
+      name: v_average
+  w_mean:
+    input:
+      name: w_average
+  T_mean:
+    input:
+      name: T_average
+  q_mean:
+    input:
+      name: q_average
+  c_mean:
+    input:
+      name: c_average
+  V_mean:
+    input:
+      name: V_average
+
+  u_mean_spk:
+    input:
+      name: u_spike
+  v_mean_spk:
+    input:
+      name: v_spike
+  w_mean_spk:
+    input:
+      name: w_spike
+  T_mean_spk:
+    input:
+      name: T_spike
+  q_mean_spk:
+    input:
+      name: q_spike
+  c_mean_spk:
+    input:
+      name: c_spike
+  V_mean_spk:
+    input:
+      name: V_spike
+
+  u_var:
+    input:
+      name: u_variance
+  v_var:
+    input:
+      name: v_variance
+  w_var:
+    input:
+      name: w_variance
+  T_var:
+    input:
+      name: T_variance
+  q_var:
+    input:
+      name: q_variance
+  c_var:
+    input:
+      name: c_variance
+  V_var:
+    input:
+      name: V_variance
+
+  u_skew:
+    input:
+      name: u_skewness
+  v_skew:
+    input:
+      name: v_skewness
+  w_skew:
+    input:
+      name: w_skewness
+  T_skew:
+    input:
+      name: T_skewness
+  q_skew:
+    input:
+      name: q_skewness
+  c_skew:
+    input:
+      name: c_skewness
+  V_skew:
+    input:
+      name: V_skewness
+
+  u_kurt:
+    input:
+      name: u_kurtosis
+  v_kurt:
+    input:
+      name: v_kurtosis
+  w_kurt:
+    input:
+      name: w_kurtosis
+  T_kurt:
+    input:
+      name: T_kurtosis
+  q_kurt:
+    input:
+      name: q_kurtosis
+  c_kurt:
+    input:
+      name: c_kurtosis
+  V_kurt:
+    input:
+      name: V_kurtosis
+
+  u_mean_rot:
+    input:
+      name: u_rotated
+  v_mean_rot:
+    input:
+      name: v_rotated
+  w_mean_rot:
+    input:
+      name: w_rotated
+  T_mean_rot:
+    input:
+      name: T_rotated
+  q_mean_rot:
+    input:
+      name: q_rotated
+  c_mean_rot:
+    input:
+      name: c_rotated
+  V_mean_rot:
+    input:
+      name: V_rotated
+  covariance:
+    input:
+      name: covariance
+  covariance_rot:
+    input:
+      name: covariance_rotated
+  sensible_heat_flux:
+    input:
+      name: sensible_heat_flux
+  latent_heat_flux:
+    input:
+      name: latent_heat_flux
+  momentum_flux:
+    input:
+      name: momentum_flux
+  friction_velocity:
+    input:
+      name: friction_velocity
+  c_flux:
+    input:
+      name: CO2_flux
+
+  wind_speed:
+    input:
+      name: wind_speed
+  wind_direction:
+    input:
+      name: wind_direction
+  wind_angle_vertical:
+    input:
+      name: wind_rotation_vertical
+  wind_angle_horizontal:
+    input:
+      name: wind_rotation_horizontal
+  wind_direction_std:
+    input:
+      name: wind_direction_std
+  wind_angle_vertical_std:
+    input:
+      name: wind_vertical_std
+
+  specific_heat:
+    input:
+      name: specific_heat
+  specific_heat_50RH:
+    input:
+      name: specific_heat_50%RH
+  heat_of_vaporization:
+    input:
+      name: heat_of_vaporization
+  heat_of_vaporization_50RH:
+    input:
+      name: heat_of_vaporization_50%RH
+  air_density:
+    input:
+      name: moist_air_density
+  air_density_50RH:
+    input:
+      name: moist_air_density_50%RH
+  mixing_ratio:
+    input:
+      name: mixing_ratio
+  mixing_ratio_50RH:
+    input:
+      name: mixing_ratio_50%RH
+
+  q_irga_signal_strength:
+    input:
+      name: irga_H20
+  c_irga_signal_strength:
+    input:
+      name: irga_C02
+  irga_pressure:
+    input:
+      name: irga_pressure
+  irga_temp:
+    input:
+      name: irga_temperature
+  irga_cooler_voltage:
+    input:
+      name: irga_cooler
+  irga_status:
+    input:
+      name: irga_status

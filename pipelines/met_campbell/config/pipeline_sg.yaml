@@ -1,0 +1,22 @@
+classname: pipelines.met_campbell.pipeline.MET
+
+triggers:
+  - .*sg\.met\.z01.*\.txt
+  - .*sg.met_z01.*\.txt
+
+retriever:
+  path: pipelines/met_campbell/config/retriever.yaml
+
+dataset:
+  path: pipelines/met_campbell/config/dataset.yaml
+  overrides:
+    /attrs/location_id: sg
+    /attrs/location_meaning: "Site G"
+    /attrs/dataset_name: met_z01
+    /data_vars/longitude/data: -97.408036
+    /data_vars/latitude/data: 36.399539
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml

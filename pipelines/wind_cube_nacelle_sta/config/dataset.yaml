@@ -1,0 +1,288 @@
+attrs:
+  title: Wind Cube Nacelle STA
+  dataset_name: wind_cube_nacelle_sta
+  description: AWAKEN Wind Cube Nacelle V2 time-averaged data
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 10m
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[s]
+    attrs:
+      units: Seconds since 1970-01-01 00:00:00
+  distance:
+    attrs:
+      description: Measurement plan distance.
+      units: m
+    dims: [distance]
+    dtype: float
+
+data_vars:
+  CNR0:
+    attrs:
+      description: Carrier-to-noise ratio along LOS0 (average data).
+      units: dB
+    dims: [time]
+    dtype: float
+  CNR1:
+    attrs:
+      description: Carrier-to-noise ratio along LOS1 (average data).
+      units: dB
+    dims: [time]
+    dtype: float
+  CNR2:
+    attrs:
+      description: Carrier-to-noise ratio along LOS2 (average data).
+      units: dB
+    dims: [time]
+    dtype: float
+  CNR3:
+    attrs:
+      description: Carrier-to-noise ratio along LOS3 (average data).
+      units: dB
+    dims: [time]
+    dtype: float
+  direction_high:
+    attrs:
+      description: Horizontal wind direction above hub (average data).
+      units: deg
+    dims: [time]
+    dtype: float
+  direction_hub:
+    attrs:
+      description: Horizontal wind direction at hub distance.
+      units: deg
+    dims: [time]
+    dtype: float
+  direction_low:
+    attrs:
+      description: Horizontal wind direction below hub (average data).
+      units: deg
+    dims: [time]
+    dtype: float
+  distance_high:
+    attrs:
+      description: Measurement distance of the beams from the top (average data).
+      units: m
+    dims: [time]
+    dtype: float
+  distance_low:
+    attrs:
+      description: Measurement distance of the bottom beams (average data).
+      units: m
+    dims: [time]
+    dtype: float
+  HWS_high:
+    attrs:
+      description: Horizontal wind speed above hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  HWS_high_availability:
+    attrs:
+      description: Availability of the reconstruction above hub (average data).
+      units: "%"
+    dims: [time]
+    dtype: float
+  HWS_hub:
+    attrs:
+      description: Horizontal wind speed at hub distance.
+      units: m/s
+    dims: [time]
+    dtype: float
+  HWS_hub_availability:
+    attrs:
+      description: Availability of the reconstruction at hub distance.
+      units: "%"
+    dims: [time]
+    dtype: float
+  HWS_low:
+    attrs:
+      description: Horizontal wind speed below hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  HWS_low_availability:
+    attrs:
+      description: Availability of the reconstruction below hub (average data).
+      units: "%"
+    dims: [time]
+    dtype: float
+  RWS0:
+    attrs:
+      description: Radial wind speed along LOS0 (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  RWS0_availability:
+    attrs:
+      description: Availability of the radial measurement along LOS0.
+      units: "%"
+    dims: [time]
+    dtype: float
+  RWS1:
+    attrs:
+      description: Radial wind speed along LOS1 (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  RWS1_availability:
+    attrs:
+      description: Availability of the radial measurement along LOS1.
+      units: "%"
+    dims: [time]
+    dtype: float
+  RWS2:
+    attrs:
+      description: Radial wind speed along LOS2 (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  RWS2_availability:
+    attrs:
+      description: Availability of the radial measurement along LOS2.
+      units: "%"
+    dims: [time]
+    dtype: float
+  RWS3:
+    attrs:
+      description: Radial wind speed along LOS3 (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  RWS3_availability:
+    attrs:
+      description: Availability of the radial measurement along LOS3.
+      units: "%"
+    dims: [time]
+    dtype: float
+  roll:
+    attrs:
+      description: Roll angle of the telescope (average data).
+      units: deg
+    dims: [time]
+    dtype: float
+  shear:
+    attrs:
+      description: Vertical wind shear coefficient.
+      units: NA
+    dims: [time]
+    dtype: float
+  TI0:
+    attrs:
+      description: Turbulence intensity along LOS0 (average data).
+      units: NA
+    dims: [time]
+    dtype: float
+  TI1:
+    attrs:
+      description: Turbulence intensity along LOS1 (average data).
+      units: NA
+    dims: [time]
+    dtype: float
+  TI2:
+    attrs:
+      description: Turbulence intensity along LOS2 (average data).
+      units: NA
+    dims: [time]
+    dtype: float
+  TI3:
+    attrs:
+      description: Turbulence intensity along LOS3 (average data).
+      units: NA
+    dims: [time]
+    dtype: float
+  TI_gain:
+    attrs:
+      description: Turbulence intensity gain (average data).
+      units: NA
+    dims: [time]
+    dtype: float
+  TI_high:
+    attrs:
+      description: Turbulence intensity above hub (average data).
+      units: "%"
+    dims: [time]
+    dtype: float
+  TI_hub:
+    attrs:
+      description: Turbulence intensity at hub distance.
+      units: NA
+    dims: [time]
+    dtype: float
+  TI_low:
+    attrs:
+      description: Turbulence intensity below hub (average data).
+      units: "%"
+    dims: [time]
+    dtype: float
+  tilt:
+    attrs:
+      description: Tilt angle of the telescope (average data).
+      units: deg
+    dims: [time]
+    dtype: float
+  U_high:
+    attrs:
+      description: Longitudinal component of the wind above hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  U_low:
+    attrs:
+      description: Longitudinal component of the wind below hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  V_high:
+    attrs:
+      description: Transversal component of the wind above hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  V_low:
+    attrs:
+      description: Transversal component of the wind below hub (average data).
+      units: m/s
+    dims: [time]
+    dtype: float
+  veer:
+    attrs:
+      description: Vertical wind veer coefficient (average data).
+      units: deg/m
+    dims: [time]
+    dtype: float
+
+  latitude:
+    data: 39.909692
+    dims: []
+    dtype: float
+    attrs:
+      description: "Latitude"
+      standard_name: "latitude"
+      comment: "Recorded lattitude at the instrument location"
+      units: "degN"
+
+  longitude:
+    data: -105.228052
+    dims: []
+    dtype: float
+    attrs:
+      description: "Longitude"
+      comment: "Recorded longitude at the instrument location"
+      units: "degE"
+
+  altitude:
+    data: 1828
+    dims: []
+    dtype: float
+    attrs:
+      description: "Altitude"
+      comment: "Recorded altitude at the instrument location"
+      units: m

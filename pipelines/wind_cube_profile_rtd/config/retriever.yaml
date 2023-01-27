@@ -1,0 +1,46 @@
+classname: tsdat.io.retrievers.DefaultRetriever
+readers:
+  .*:
+    classname: pipelines.wind_cube_profile_rtd.readers.WindCubeProfileRTDReader
+
+coords:
+  time:
+    name: Timestamp
+    data_converters:
+      - classname: tsdat.io.converters.StringToDatetime
+        format: "%Y-%m-%d %H:%M:%S.%f"
+        timezone: UTC
+  distance:
+    name: distance
+
+data_vars:
+  # internal_temperature:
+  #   name: Int Temp
+  air_temperature:
+    name: Temperature
+  # pressure:
+  #   name: Pressure
+  # relative_humidity:
+  #   name: Rel Humidity
+  wiper_count:
+    name: Wiper Count
+  # battery_voltage:
+  #   name: Vbatt
+  wind_speed:
+    name: wind_speed
+  radial_wind_speed:
+    name: radial_wind_speed
+  radial_dispersion:
+    name: radial_dispersion
+  wind_speed_z:
+    name: wind_speed_z
+  wind_speed_x:
+    name: wind_speed_x
+  wind_speed_y:
+    name: wind_speed_y
+  wind_direction:
+    name: wind_direction
+  CNR:
+    name: CNR
+  position:
+    name: Position

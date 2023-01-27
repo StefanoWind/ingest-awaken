@@ -1,0 +1,152 @@
+attrs:
+  title: Wind Cube Profile AVG
+  dataset_name: wind_cube_profile_sta
+  description: AWAKEN Wind Cube profile time-averaged data
+  institution: Atmosphere to Electrons
+  location_id: nwtc
+  location_meaning: NREL Flatirons Test Site
+  data_level: a1
+  # qualifier: lidar
+  # temporal: 10m
+  conventions: MHKiT-Cloud Data Standards v. 1.0
+
+coords:
+  time:
+    dims: [time]
+    dtype: datetime64[s]
+    attrs:
+      units: Seconds since 1970-01-01 00:00:00
+
+  distance:
+    dims: [distance]
+    dtype: int
+    attrs:
+      long_name: distance ASL
+      units: m
+
+data_vars:
+  wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Wind Speed
+      units: m/s
+      comment: Average wind speed over 10 minute interval
+
+  horizontal_dispersion:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Horizontal Dispersion
+      units: m/s
+
+  min_wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Min Wind Speed
+      units: m/s
+      comment: Minimum wind speed measured during 10 minute interval
+
+  max_wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Max Wind Speed
+      units: m/s
+      comment: Maximum wind speed measured during 10 minute interval
+
+  wind_direction:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Wind Direction
+      units: degrees
+
+  vertical_wind_speed:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Vertical Wind Speed
+      units: m/s
+
+  vertical_dispersion:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Vertical Dispersion
+      units: m/s
+
+  CNR:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Carrier to Noise Ratio (CNR)
+      units: dB
+
+  doppler_spectral_broadening:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Doppler Spectral Broadening
+      units: m/s
+
+  data_availability:
+    dims: [time, distance]
+    dtype: float
+    attrs:
+      long_name: Availability
+      units: "%"
+
+  pressure:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Pressure
+      units: hPa
+
+  relative_humidity:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Relative Humidity
+      units: "%"
+
+  internal_temperature:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Internal Temperature
+      units: degC
+
+  air_temperature:
+    dims: [time]
+    dtype: float
+    attrs:
+      long_name: Air Temperature
+      units: degC
+
+  latitude:
+    data: 45.6911
+    attrs:
+      description: ""
+      long_name: Latitude
+      units: degN
+    dims: []
+    dtype: float
+  longitude:
+    data: -120.7457
+    attrs:
+      description: ""
+      long_name: Longitude
+      units: degE
+    dims: []
+    dtype: float
+
+  altitude:
+    data: 63
+    attrs:
+      long_name: Altitude
+      units: m
+    dims: []
+    dtype: float

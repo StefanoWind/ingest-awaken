@@ -1,0 +1,111 @@
+attrs:
+  title: Campbell MET Data
+  dataset_name: met_z01
+  description: AWAKEN Campbell meteorological data
+  institution: Atmosphere to Electrons
+  location_id: sa4
+  location_meaning: Site A4
+  data_level: a1
+  # qualifier: met
+  # temporal: 1m
+  conventions: MHKiT-Cloud Data Standards v1.0
+
+coords:
+  time:
+    attrs:
+      long_name: Time (UTC)
+      units: Seconds since 1970-01-01 00:00:00
+    dims:
+      - time
+    dtype: datetime64[s]
+
+data_vars:
+  average_wind_speed:
+    attrs:
+      description: Mean horizontal wind speed
+      long_name: Average Wind Speed
+      units: m/s
+    dims:
+      - time
+    dtype: float
+  pressure:
+    attrs:
+      description: Barometric pressure (not corrected for sea-level)
+      long_name: Pressure
+      units: kPa
+    dims:
+      - time
+    dtype: float
+  relative_humidity:
+    attrs:
+      description: ""
+      long_name: Relative Humidity
+      units: "%"
+    dims:
+      - time
+    dtype: float
+  shortwave_radiation:
+    attrs:
+      description: Downwelling shortwave radiance in air (wavelength = 400-1100 nm)
+      long_name: Shortwave Radiation
+      units: W/m^2
+    dims:
+      - time
+    dtype: float
+  temperature:
+    attrs:
+      description: Air temperature
+      long_name: Temperature
+      units: degC
+    dims:
+      - time
+    dtype: float
+  wind_direction:
+    attrs:
+      description: Resultant mean wind speed direction
+      long_name: Wind Direction
+      units: deg
+    dims:
+      - time
+    dtype: float
+  wind_direction_std:
+    attrs:
+      description: Standard deviation of wind direction
+      long_name: Wind Direction Std
+      units: deg
+    dims:
+      - time
+    dtype: float
+  wind_speed:
+    attrs:
+      description: Resultant mean wind speed
+      long_name: Wind Speed
+      units: m/s
+    dims:
+      - time
+    dtype: float
+
+  latitude:
+    data: 45.6911
+    attrs:
+      description: ""
+      long_name: Latitude
+      units: degN
+    dims: []
+    dtype: float
+  longitude:
+    data: -120.7457
+    attrs:
+      description: ""
+      long_name: Longitude
+      units: degE
+    dims: []
+    dtype: float
+
+  altitude:
+    data: 63
+    attrs:
+      long_name: Altitude
+      units: m
+    dims: []
+    dtype: float

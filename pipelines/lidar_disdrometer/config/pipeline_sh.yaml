@@ -1,0 +1,15 @@
+classname: pipelines.lidar_disdrometer.pipeline.LidarDisdrometer
+
+triggers:
+  - .*sh.ld.z01.*\.txt
+
+retriever:
+  path: pipelines/lidar_disdrometer/config/retriever.yaml
+
+dataset:
+  path: pipelines/lidar_disdrometer/config/dataset.yaml
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml
