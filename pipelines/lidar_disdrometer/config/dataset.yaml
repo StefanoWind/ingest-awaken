@@ -4,7 +4,7 @@ attrs:
   description: AWAKEN Laser Disdrometer data
   institution: Atmosphere to Electrons
   location_meaning: ""
-  location_id: sh_
+  location_id: sh
   data_level: a1
   # qualifier: lidar
   # temporal: 10s

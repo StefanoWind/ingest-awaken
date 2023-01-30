@@ -1,0 +1,2 @@
+To fix issue with conda SSL, copy libcrypto-1_1-x64.*
+libssl-1_1-x64.* from the Anaconda3/Library/bin to Anaconda3/DLLs

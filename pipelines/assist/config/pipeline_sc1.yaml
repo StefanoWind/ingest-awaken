@@ -1,7 +1,7 @@
 classname: pipelines.assist.pipeline.Assist
 
 triggers:
-  - .*nwtc.assist.z02.*assistsummary.cdf
+  - .*sc1\.assist\.z01\.00.*\.assistsummary.cdf
 
 retriever:
   path: pipelines/assist/config/retriever.yaml
@@ -9,11 +9,10 @@ retriever:
 dataset:
   path: pipelines/assist/config/dataset.yaml
   overrides:
-    /attrs/location_id: sb
-    /attrs/location_meaning: "Site B"
-    /attrs/dataset_name: assist
-    /data_vars/longitude/data: -97.558676
-    /data_vars/latitude/data: 36.231763
+    /attrs/location_id: sc1
+    /attrs/location_meaning: "Site C1a"
+    /data_vars/longitude/data: -97.510022
+    /data_vars/latitude/data: 36.361602
 
 quality:
   path: shared/quality.yaml

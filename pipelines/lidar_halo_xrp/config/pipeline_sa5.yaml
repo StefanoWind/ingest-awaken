@@ -1,13 +1,18 @@
 classname: pipelines.lidar_halo_xrp.pipeline.LidarHaloXrp
 
 triggers:
-  - .*lidar.z02.*\.hpl
+  - .*sa5\.lidar\.z01\.00.*\.hpl
 
 retriever:
   path: pipelines/lidar_halo_xrp/config/retriever.yaml
 
 dataset:
   path: pipelines/lidar_halo_xrp/config/dataset.yaml
+  overrides:
+    /attrs/location_id: sa5
+    /attrs/location_meaning: "Site A5"
+    /data_vars/longitude/data: -97.381548
+    /data_vars/latitude/data: 36.361762
 
 quality:
   path: shared/quality.yaml

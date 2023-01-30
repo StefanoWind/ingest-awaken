@@ -40,13 +40,8 @@ class METReader(DataReader):
 
         dt = [0] * len(df)
         for year, jd, t, i in zip(df["year"], df["day"], df["time"], df.index):
-            if t < 100:
-                time_str = str(year - 2000) + str(jd) + "00" + str(t)
-            elif t < 1000:
-                time_str = str(year - 2000) + str(jd) + "0" + str(t)
-            else:
-                time_str = str(year - 2000) + str(jd) + str(t)
-            dt[i] = datetime.strptime(time_str, "%y%j%H%M")  # type: ignore
+            t = f"{'0'*(4 - len(str(t)))}{t}"  # pad t so it is always HHMM (not HMM or MM)
+            dt[i] = datetime.strptime(f"{year}-{jd}-{t}", "%Y-%j-%H%M")  # type: ignore
 
         df["datetime"] = dt
         df.drop(columns=["year", "day", "time"], inplace=True)
