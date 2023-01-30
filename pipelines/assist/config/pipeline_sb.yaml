@@ -1,7 +1,7 @@
 classname: pipelines.assist.pipeline.Assist
 
 triggers:
-  - .*assist.z02.*\.cdf
+  - .*sb\.assist\.z01\.00.*\.assistsummary.cdf
 
 retriever:
   path: pipelines/assist/config/retriever.yaml
@@ -11,7 +11,6 @@ dataset:
   overrides:
     /attrs/location_id: sb
     /attrs/location_meaning: "Site B"
-    /attrs/dataset_name: assist
     /data_vars/longitude/data: -97.558676
     /data_vars/latitude/data: 36.231763
 

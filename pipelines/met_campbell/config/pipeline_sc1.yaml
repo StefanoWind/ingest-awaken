@@ -10,7 +10,7 @@ retriever:
 dataset:
   path: pipelines/met_campbell/config/dataset.yaml
   overrides:
-    /attrs/location_id: sc1_
+    /attrs/location_id: sc1
     /attrs/location_meaning: "Site C1a"
     /attrs/dataset_name: met_z01
     /data_vars/longitude/data: -97.510022

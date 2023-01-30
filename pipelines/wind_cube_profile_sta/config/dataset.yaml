@@ -125,3 +125,28 @@ data_vars:
     attrs:
       long_name: Air Temperature
       units: degC
+
+  latitude:
+    data: 45.6911
+    attrs:
+      description: ""
+      long_name: Latitude
+      units: degN
+    dims: []
+    dtype: float
+  longitude:
+    data: -120.7457
+    attrs:
+      description: ""
+      long_name: Longitude
+      units: degE
+    dims: []
+    dtype: float
+
+  altitude:
+    data: 63
+    attrs:
+      long_name: Altitude
+      units: m
+    dims: []
+    dtype: float

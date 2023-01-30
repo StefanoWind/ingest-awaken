@@ -1,6 +1,6 @@
 attrs:
   title: ASSIST Radiance Summary
-  dataset_name: assist_z02
+  dataset_name: assist
   description: AWAKEN ASSIST radiance summary data
   institution: Atmosphere to Electrons
   location_id: nwtc
@@ -21,8 +21,7 @@ coords:
 data_vars:
   abb_apex_temperature:
     attrs:
-      description:
-        Temperature of the ambient black body measured at apex (in overall summary file)
+      description: Temperature of the ambient black body measured at apex (in overall summary file)
       long_name: ABB Apex Temperature
       units: degC
     dims:
@@ -40,8 +39,7 @@ data_vars:
     dtype: float
   abb_top_temperature:
     attrs:
-      description:
-        Temperature of the ambient black body measured at top (in overall summary file)
+      description: Temperature of the ambient black body measured at top (in overall summary file)
       long_name: ABB Top Temperature
       units: degC
     dims:
@@ -59,8 +57,7 @@ data_vars:
     dtype: float
   front_end_temperature:
     attrs:
-      description:
-        Temperature of the front end of the enclosure (in overall summary file)
+      description: Temperature of the front end of the enclosure (in overall summary file)
       long_name: Front End Temperature
       units: degC
     dims:
@@ -76,8 +73,7 @@ data_vars:
     dtype: float
   hbb_apex_temperature:
     attrs:
-      description:
-        Temperature of the hot black body measured at apex (in overall summary file)
+      description: Temperature of the hot black body measured at apex (in overall summary file)
       long_name: HBB Apex Temperature
       units: degC
     dims:
@@ -85,8 +81,7 @@ data_vars:
     dtype: float
   hbb_bottom_temperature:
     attrs:
-      description:
-        Temperature of the hot black body measured at bottom (in overall summary file)
+      description: Temperature of the hot black body measured at bottom (in overall summary file)
       long_name: HBB Bottom Temperature
       units: degC
     dims:
@@ -94,8 +89,7 @@ data_vars:
     dtype: float
   hbb_top_temperature:
     attrs:
-      description:
-        Temperature of the hot black body measured at top (in overall summary file)
+      description: Temperature of the hot black body measured at top (in overall summary file)
       long_name: HBB Top Temperature
       units: degC
     dims:
@@ -119,8 +113,7 @@ data_vars:
     dtype: float
   lw_responsivity:
     attrs:
-      description:
-        Average responsivity of the long-wave detector (in overall summary file)
+      description: Average responsivity of the long-wave detector (in overall summary file)
       long_name: LW Responsivity
       units: "1"
     dims:
@@ -166,8 +159,7 @@ data_vars:
     dtype: float
   sw_responsivity:
     attrs:
-      description:
-        Average responsivity of the short-wave detector (in overall summary file)
+      description: Average responsivity of the short-wave detector (in overall summary file)
       long_name: SW Responsivity
       units: "1"
     dims:
