@@ -1,3 +1,5 @@
 classname: tsdat.io.storage.FileSystem
+parameters:
+  storage_root: storage/root/awaken
 handler:
   classname: tsdat.io.handlers.NetCDFHandler
