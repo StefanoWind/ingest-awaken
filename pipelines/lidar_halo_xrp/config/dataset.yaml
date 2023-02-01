@@ -5,7 +5,7 @@ attrs:
   location_id: nwtc
   location_meaning: NREL Flatirons Test Site
   dataset_name: lidar
-  data_level: b0
+  data_level: a0
   qualifier: halo_xrp
   # temporal:
   conventions: MHKiT-Cloud Data Standards v. 1.0
