@@ -9,7 +9,7 @@ def test_wind_cube_profile_rtd_pipeline():
     pipeline = config.instantiate_pipeline()
 
     test_file = "pipelines/wind_cube_profile_rtd/test/data/input/WLS71460_2022_02_01__00_00_00.rtd.7z"
-    expected_file = "pipelines/wind_cube_profile_rtd/test/data/expected/sb.wind_cube_profile_rtd.a1.20220201.000000.nc"
+    expected_file = "pipelines/wind_cube_profile_rtd/test/data/expected/sb.wind_cube_profile_rtd.b0.20220201.000000.nc"
 
     dataset = pipeline.run([test_file])
     expected: xr.Dataset = xr.open_dataset(expected_file)  # type: ignore

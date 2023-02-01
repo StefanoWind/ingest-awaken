@@ -12,7 +12,7 @@ def test_met_campbell_pipeline():
         "pipelines/met_campbell/test/data/input/sa1.met.z01.00.20211207.130000.txt"
     )
     expected_file = (
-        "pipelines/met_campbell/test/data/expected/sa1.met_z01.a1.20211207.130000.nc"
+        "pipelines/met_campbell/test/data/expected/sa1.met_z01.b0.20211207.130000.nc"
     )
 
     dataset = pipeline.run([test_file])

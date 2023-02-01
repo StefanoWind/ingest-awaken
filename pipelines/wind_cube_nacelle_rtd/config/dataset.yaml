@@ -5,7 +5,7 @@ attrs:
   institution: Atmosphere to Electrons
   location_meaning: NREL Flatirons Test Site
   location_id: nwtc
-  data_level: a1
+  data_level: b0
   # qualifier: lidar
   # temporal: 1s
   conventions: MHKiT-Cloud Data Standards v1.0

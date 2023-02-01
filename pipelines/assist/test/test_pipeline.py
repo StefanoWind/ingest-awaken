@@ -10,7 +10,7 @@ def test_assist_pipeline():
 
     test_file = "pipelines/assist/test/data/input/nwtc.assist.z02.00.20220512.000124.assistsummary.cdf"
     expected_file = (
-        "pipelines/assist/test/data/expected/sb.assist.a1.20220512.000130.nc"
+        "pipelines/assist/test/data/expected/sb.assist.a0.20220512.000130.nc"
     )
 
     dataset = pipeline.run([test_file])

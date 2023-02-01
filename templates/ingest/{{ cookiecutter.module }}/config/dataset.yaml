@@ -5,7 +5,7 @@ attrs:
   description: {{ cookiecutter.ingest_description }}
   location_id: {{ cookiecutter.location_id }}
   dataset_name: {{ cookiecutter.module }}
-  data_level: {% if cookiecutter.use_custom_qc == "no" %}a1{% else %}b1{% endif %}
+  data_level: {% if cookiecutter.use_custom_qc == "no" %}a0{% else %}b0{% endif %}
   # qualifier: 
   # temporal: 
   # institution: 
