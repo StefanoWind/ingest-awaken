@@ -5,7 +5,7 @@ attrs:
   institution: Atmosphere to Electrons
   location_meaning: ""
   location_id: sh
-  data_level: a1
+  data_level: b0
   # qualifier: lidar
   # temporal: 10s
   conventions: MHKiT-Cloud Data Standards v1.0

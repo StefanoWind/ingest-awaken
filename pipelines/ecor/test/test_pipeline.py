@@ -10,7 +10,7 @@ def test_ecor_pipeline():
 
     test_file = "pipelines/ecor/test/data/input/sgpecorE14.00.20190910.010201.raw.2019_0910_0000_14.flx"
     expected_file = (
-        "pipelines/ecor/test/data/expected/sgp.ecor_e14.a1.20190910.000000.nc"
+        "pipelines/ecor/test/data/expected/sgp.ecor_e14.b0.20190910.000000.nc"
     )
 
     dataset = pipeline.run([test_file])

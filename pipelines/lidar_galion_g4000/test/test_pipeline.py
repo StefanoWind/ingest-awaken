@@ -9,7 +9,7 @@ def test_lidar_galion_g4000_pipeline():
     pipeline = config.instantiate_pipeline()
 
     test_file = "pipelines/lidar_galion_g4000/test/data/input/Galion - NREL - 1750194_23071906_56.scn"
-    expected_file = "pipelines/lidar_galion_g4000/test/data/expected/nwtc.lidar_galion_g4000.a1.20190723.060354.nc"
+    expected_file = "pipelines/lidar_galion_g4000/test/data/expected/nwtc.lidar_galion_g4000.b0.20190723.060354.nc"
 
     dataset = pipeline.run([test_file])
     expected: xr.Dataset = xr.open_dataset(expected_file)  # type: ignore
