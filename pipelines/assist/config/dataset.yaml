@@ -1,6 +1,6 @@
 attrs:
   title: ASSIST Radiance Summary
-  dataset_name: assist
+  dataset_name: assist_z01
   description: AWAKEN ASSIST radiance summary data
   institution: Atmosphere to Electrons
   location_id: nwtc
