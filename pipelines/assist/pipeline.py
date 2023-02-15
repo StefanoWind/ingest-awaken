@@ -205,7 +205,7 @@ class Assist(IngestPipeline):
                     if i < len(ax):
                         a.xaxis.set_ticklabels([])
                     i += 1
-                    a.grid(b=True)
+                    a.grid(visible=True)
                 plt.xlabel("UTC time")
 
             plot_file = get_filename(dataset, title="summary", extension="png")
