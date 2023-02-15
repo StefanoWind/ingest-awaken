@@ -11,6 +11,7 @@ dataset:
   overrides:
     /attrs/location_id: sa7
     /attrs/location_meaning: "Site A7"
+    /attrs/dataset_name: lidar_z01
     /data_vars/longitude/data: -97.389807
     /data_vars/latitude/data: 36.347010
 

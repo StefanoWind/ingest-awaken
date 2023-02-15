@@ -11,7 +11,7 @@ def test_lidar_disdrometer_pipeline():
     test_file = (
         "pipelines/lidar_disdrometer/test/data/input/sh.ld.z01.00.20221114.200300.txt"
     )
-    expected_file = "pipelines/lidar_disdrometer/test/data/expected/sh_.ldis_z01.a1.20221114.200300.nc"
+    expected_file = "pipelines/lidar_disdrometer/test/data/expected/sh_.ldis_z01.b0.20221114.200300.nc"
 
     dataset = pipeline.run([test_file])
     expected: xr.Dataset = xr.open_dataset(expected_file)  # type: ignore

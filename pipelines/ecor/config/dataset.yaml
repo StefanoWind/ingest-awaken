@@ -6,7 +6,7 @@ attrs:
     (https://www.arm.gov/publications/tech_reports/handbooks/ecor_handbook.pdf)
   institution: Atmosphere to Electrons
   location_id: sgp
-  data_level: a1
+  data_level: b0
   # qualifier: ecor
   # temporal: 30m
   conventions: MHKiT-Cloud Data Standards v1.0

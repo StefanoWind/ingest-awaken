@@ -1,11 +1,11 @@
 attrs:
   title: ASSIST Radiance Summary
-  dataset_name: assist
+  dataset_name: assist_z01
   description: AWAKEN ASSIST radiance summary data
   institution: Atmosphere to Electrons
   location_id: nwtc
   location_meaning: NREL Flatirons Test Site
-  data_level: a1
+  data_level: a0
   # qualifier: rad
   # temporal: 10s
   conventions: MHKiT-Cloud Data Standards v1.0
