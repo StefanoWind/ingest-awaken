@@ -38,41 +38,36 @@ class HplReader(DataReader):
                 f.readline()
 
             # initialize arrays
-            max_len = 20000
-            time = np.full(max_len, fill_value=np.nan)
-            azimuth = np.full(max_len, fill_value=np.nan)
-            elevation = np.full(max_len, fill_value=np.nan)
-            pitch = np.full(max_len, fill_value=np.nan)
-            roll = np.full(max_len, fill_value=np.nan)
-            doppler = np.full((max_len, num_gates), fill_value=np.nan)
-            intensity = np.full((max_len, num_gates), fill_value=np.nan)
-            beta = np.full((max_len, num_gates), fill_value=np.nan)
-
-            index = 0
+            time = []
+            azimuth = []
+            elevation = []
+            pitch = []
+            roll = []
+            doppler = []
+            intensity = []
+            beta = []
 
             while True:
                 a = f.readline().split()
                 if not len(a):  # is empty
                     break
 
-                time[index] = float(a[0])
-                azimuth[index] = float(a[1])
-                elevation[index] = float(a[2])
-                pitch[index] = float(a[3])
-                roll[index] = float(a[4])
+                time.append(float(a[0]))
+                azimuth.append(float(a[1]))
+                elevation.append(float(a[2]))
+                pitch.append(float(a[3]))
+                roll.append(float(a[4]))
+
+                doppler.append([0] * num_gates)
+                intensity.append([0] * num_gates)
+                beta.append([0] * num_gates)
 
                 for _ in range(num_gates):
                     b = f.readline().split()
                     range_gate = int(b[0])
-                    doppler[index, range_gate] = float(b[1])
-                    intensity[index, range_gate] = float(b[2])
-                    beta[index, range_gate] = float(b[3])
-
-                # increment index
-                index += 1
-
-        # Trim data where first time index is nan
-        last_ind = np.where(np.isnan(time))[0][0]
+                    doppler[-1:][0][range_gate] = float(b[1])
+                    intensity[-1:][0][range_gate] = float(b[2])
+                    beta[-1:][0][range_gate] = float(b[3])
 
         # convert date to np.datetime64
         start_time_string = "{}-{}-{}T{}:{}:{}".format(
@@ -91,20 +86,19 @@ class HplReader(DataReader):
 
         start_time = np.datetime64(start_time_string)
         datetimes = [
-            start_time + np.timedelta64(int(3600 * 1e6 * dtime), "us")
-            for dtime in time[:last_ind]
+            start_time + np.timedelta64(int(3600 * 1e6 * dtime), "us") for dtime in time
         ]
 
         dataset = xr.Dataset(
             {
-                "Decimal time (hours)": (("time"), time[:last_ind]),
-                "Azimuth (degrees)": (("time"), azimuth[:last_ind]),
-                "Elevation (degrees)": (("time"), elevation[:last_ind]),
-                "Pitch (degrees)": (("time"), pitch[:last_ind]),
-                "Roll (degrees)": (("time"), roll[:last_ind]),
-                "Doppler": (("time", "range_gate"), doppler[:last_ind, :]),
-                "Intensity": (("time", "range_gate"), intensity[:last_ind, :]),
-                "Beta": (("time", "range_gate"), beta[:last_ind, :]),
+                "Decimal time (hours)": (("time"), time),
+                "Azimuth (degrees)": (("time"), azimuth),
+                "Elevation (degrees)": (("time"), elevation),
+                "Pitch (degrees)": (("time"), pitch),
+                "Roll (degrees)": (("time"), roll),
+                "Doppler": (("time", "range_gate"), doppler),
+                "Intensity": (("time", "range_gate"), intensity),
+                "Beta": (("time", "range_gate"), beta),
             },
             coords={"time": np.array(datetimes), "range_gate": np.arange(num_gates)},
             attrs={"Range gate length (m)": float(metadata["Range gate length (m)"])},  # type: ignore
