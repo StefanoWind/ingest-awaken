@@ -114,7 +114,7 @@ class Assist(IngestPipeline):
             [1, 0, 1, 1],
             [0, 1, 1, 1],
         ]
-        ylim = [[-150, 50], [0, 70], [1.5 * 10**5, 2 * 10**5], [-1, 1], [0, 15]]
+        ylim = [[-150, 50], [0, 70], [0, 5 * 10**5], [-1, 1], [0, 15]]
         yscale = ["linear", "linear", "linear", "linear", "linear"]
 
         N_days = 2
@@ -191,7 +191,7 @@ class Assist(IngestPipeline):
                         y_in[(y > yl[1]) + (y < yl[0])] = np.nan  # type: ignore
                         y_out[y_out > yl[1]] = yl[1] - (yl[1] - yl[0]) * 0.01  # type: ignore
                         y_out[y_out < yl[0]] = yl[0] + (yl[1] - yl[0]) * 0.01  # type: ignore
-                        plt.plot(y_in, "-", linewidth=0.5, color=colors[ii], label=c)
+                        plt.plot(y_in, "-", linewidth=1, color=colors[ii], label=c)
                         plt.plot(y_out, "-", linewidth=1, color=colors[ii], alpha=0.5)
                         ii += 1
                     if len(ps) > 1:
