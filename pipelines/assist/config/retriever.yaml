@@ -37,7 +37,7 @@ data_vars:
   #   name: mean_rad
   mean_tb_675_680:
     name: mean_Tb_675_680
-  # mean_tb_985_990:
-  #   name: mean_Tb_985-990
+  mean_tb_985_990:
+    name: mean_Tb_985_990
   sw_responsivity:
     name: SWresponsivity
