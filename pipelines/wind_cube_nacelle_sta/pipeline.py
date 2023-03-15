@@ -33,46 +33,54 @@ class WindCubeNacelleSTA(IngestPipeline):
         # sta file
         # Wind speed and cnr plot
         with self.storage.uploadable_dir(datastream) as tmp_dir:
-            fig, ax = plt.subplots(3, 1)
+            fig, ax = plt.subplots(4, 1)
 
             dataset["HWS_low"].mean(dim="distance").plot(
-                ax=ax[0], x="time", label="HWS_low"
+                ax=ax[0], x="time", label="low"
             )
             dataset["HWS_hub"].mean(dim="distance").plot(
-                ax=ax[0], x="time", label="HWS_hub"
+                ax=ax[0], x="time", label="hub"
             )
             dataset["HWS_high"].mean(dim="distance").plot(
-                ax=ax[0], x="time", label="HWS_high"
+                ax=ax[0], x="time", label="high"
             )
             ax[0].set_ylabel("HWS (m/s)")
             ax[0].set_xlabel("Time (UTC)")
             ax[0].legend()
 
-            dataset["TI_low"].mean(dim="distance").plot(
-                ax=ax[1], x="time", label="TI_low"
+            dataset["direction_low"].mean(dim="distance").plot(
+                ax=ax[1], x="time", label="low"
             )
-            dataset["TI_hub"].mean(dim="distance").plot(
-                ax=ax[1], x="time", label="TI_hub"
+            dataset["direction_hub"].mean(dim="distance").plot(
+                ax=ax[1], x="time", label="hub"
             )
-            dataset["TI_high"].mean(dim="distance").plot(
-                ax=ax[1], x="time", label="TI_high"
+            dataset["direction_high"].mean(dim="distance").plot(
+                ax=ax[1], x="time", label="high"
             )
-            ax[1].set_ylabel("TI (-)")
+            ax[1].set_ylabel(r"WD ($^\circ$)")
             ax[1].set_xlabel("Time (UTC)")
             ax[1].legend()
 
-            dataset["CNR0"].mean(dim="distance").plot(ax=ax[2], x="time", label="CNR0")
-            dataset["CNR1"].mean(dim="distance").plot(ax=ax[2], x="time", label="CNR1")
-            dataset["CNR2"].mean(dim="distance").plot(ax=ax[2], x="time", label="CNR2")
-            dataset["CNR3"].mean(dim="distance").plot(ax=ax[2], x="time", label="CNR3")
-            ax[2].set_ylim((None, 0))
-            ax[2].set_ylabel("CNR (dB)")
+            dataset["TI_low"].mean(dim="distance").plot(ax=ax[2], x="time", label="low")
+            dataset["TI_hub"].mean(dim="distance").plot(ax=ax[2], x="time", label="hub")
+            dataset["TI_high"].mean(dim="distance").plot(
+                ax=ax[2], x="time", label="high"
+            )
+            ax[2].set_ylabel("TI (-)")
             ax[2].set_xlabel("Time (UTC)")
             ax[2].legend()
 
-            fig.suptitle(f"Wind speed and CNR at {location} on {date}")
+            dataset["CNR0"].mean(dim="distance").plot(ax=ax[3], x="time", label="CNR0")
+            dataset["CNR1"].mean(dim="distance").plot(ax=ax[3], x="time", label="CNR1")
+            dataset["CNR2"].mean(dim="distance").plot(ax=ax[3], x="time", label="CNR2")
+            dataset["CNR3"].mean(dim="distance").plot(ax=ax[3], x="time", label="CNR3")
+            ax[3].set_ylim((None, 0))
+            ax[3].set_ylabel("CNR (dB)")
+            ax[3].set_xlabel("Time (UTC)")
+            ax[3].legend()
+
+            fig.suptitle(f"Wind speed, direction and CNR at {location} on {date}")
             [a.set_title("") for a in ax]  # Remove bogus title created by xarray
-            # [format_time_xticks(a) for a in ax]
 
             plot_file = get_filename(dataset, title="wind_cnr", extension="png")
             fig.savefig(tmp_dir / plot_file)

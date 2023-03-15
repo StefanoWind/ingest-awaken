@@ -1,13 +1,19 @@
 classname: pipelines.wind_cube_nacelle_sta.pipeline.WindCubeNacelleSTA
 
 triggers:
-  - .*average.*\.csv
+  - .*average_data.*\.csv
 
 retriever:
   path: pipelines/wind_cube_nacelle_sta/config/retriever.yaml
 
 dataset:
   path: pipelines/wind_cube_nacelle_sta/config/dataset.yaml
+  overrides:
+    /attrs/location_id: rt1
+    /attrs/location_meaning: "Turbine H05"
+    /attrs/dataset_name: lidar_z01
+    /data_vars/longitude/data: -97.405487
+    /data_vars/latitude/data: 36.364708
 
 quality:
   path: shared/quality.yaml
