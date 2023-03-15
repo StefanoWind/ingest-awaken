@@ -1,0 +1,23 @@
+classname: pipelines.lidar_halo_xrp.pipeline.LidarHaloXrp
+
+triggers:
+  - .*sc1\.lidar\.z01\.00.*\.hpl
+
+retriever:
+  path: pipelines/lidar_halo_xrp/config/retriever.yaml
+
+dataset:
+  path: pipelines/lidar_halo_xrp/config/dataset.yaml
+  overrides:
+    /attrs/description: AWAKEN XR Halo Lidar data
+    /attrs/qualifier: halo_xr
+    /attrs/location_id: sc1
+    /attrs/location_meaning: "Site C1a"
+    /attrs/dataset_name: lidar_z01
+    /data_vars/longitude/data: -97.510022
+    /data_vars/latitude/data: 36.361602
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml
