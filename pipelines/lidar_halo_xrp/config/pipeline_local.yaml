@@ -1,7 +1,7 @@
 classname: pipelines.lidar_halo_xrp.pipeline.LidarHaloXrp
 
 triggers:
-  - .*.hpl
+  - .*nan.hpl
 
 retriever:
   path: pipelines/lidar_halo_xrp/config/retriever.yaml
