@@ -1,0 +1,21 @@
+classname: pipelines.lidar_halo_xrp.pipeline.LidarHaloXrp
+
+triggers:
+  - .*rt5\.lidar\.z01\.00.*\.hpl
+
+retriever:
+  path: pipelines/lidar_halo_xrp/config/retriever.yaml
+
+dataset:
+  path: pipelines/lidar_halo_xrp/config/dataset.yaml
+  overrides:
+    /attrs/location_id: rt5
+    /attrs/location_meaning: "Instrumented turbine G06, forward-facing"
+    /attrs/dataset_name: lidar_z01
+    /data_vars/longitude/data: -97.387932
+    /data_vars/latitude/data: 36.378235
+
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml
