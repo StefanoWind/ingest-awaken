@@ -10,7 +10,7 @@ dataset:
   path: pipelines/lidar_halo_xrp/config/dataset.yaml
   overrides:
     /attrs/location_id: rt1
-    /attrs/location_meaning: "Instrumented turbine H05, rear facing"
+    /attrs/location_meaning: "Instrumented turbine H05, rear-facing"
     /attrs/dataset_name: lidar_z02
     /data_vars/longitude/data: -97.405487
     /data_vars/latitude/data: 36.364708
