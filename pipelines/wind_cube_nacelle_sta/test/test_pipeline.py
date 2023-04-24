@@ -4,7 +4,7 @@ from tsdat import PipelineConfig, assert_close
 
 
 def test_wind_cube_nacelle_sta_pipeline():
-    config_path = Path("pipelines/wind_cube_nacelle_sta/config/pipeline_nwtc.yaml")
+    config_path = Path("pipelines/wind_cube_nacelle_sta/config/pipeline_rt1.yaml")
     config = PipelineConfig.from_yaml(config_path)
     pipeline = config.instantiate_pipeline()
 
@@ -13,4 +13,9 @@ def test_wind_cube_nacelle_sta_pipeline():
 
     dataset = pipeline.run([test_file])
     expected: xr.Dataset = xr.open_dataset(expected_file)  # type: ignore
+
+    # Location changed after initial test file was created
+    expected["latitude"].data = 36.364708
+    expected["longitude"].data = -97.405487
+
     assert_close(dataset, expected, check_attrs=False)

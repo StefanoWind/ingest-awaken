@@ -6,7 +6,7 @@ attrs:
   location_meaning: NREL Flatirons Test Site
   location_id: nwtc
   data_level: a0
-  # qualifier: lidar
+  qualifier: nacelle_rtd
   # temporal: 1s
   conventions: MHKiT-Cloud Data Standards v1.0
 
